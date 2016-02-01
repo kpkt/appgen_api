@@ -29,5 +29,6 @@
 <script src="js/jquery.min.js" ></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/function.js" type="text/javascript"></script>
 </body>
 </html>

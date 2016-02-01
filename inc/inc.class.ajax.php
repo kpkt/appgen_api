@@ -44,12 +44,17 @@ class crudajax {
      * 
      */
     public function ajax_get_all_users($query) {
+        $data = array();
         $stmt = $this->db->prepare($query); //SELECT <field1>, <field2> FROM <table>
         $stmt->execute();
         /* if result execute not empty */
         if ($stmt->rowCount() > 0) {
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $results;
+            $dataTrue = array(
+                'status' => 'berjaya',
+                'data' => $results
+            );
+            return $dataTrue;
         }
     }
 
@@ -67,9 +72,16 @@ class crudajax {
             /* if result execute not empty */
             if ($stmt->rowCount() > 0) {
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return $result;
+                $dataTrue = array(
+                    'status' => 'berjaya',
+                    'data' => $result
+                );
+                return $dataTrue;
             } else {
-                return FALSE;
+                $dataFalse = array(
+                    'status' => 'gagal'
+                );
+                return $dataFalse;
             }
         } else {
             
@@ -93,10 +105,19 @@ class crudajax {
             $stmt->bindparam(":email", $femail);
             $stmt->bindparam(":phone", $fphone);
             $stmt->execute();
-            return true;
+
+            $lastInsertId = $this->db->lastInsertId(); //Get Last ID after insert
+            $dataTrue = array(
+                'status' => 'berjaya',
+                'data' => array('id' => $lastInsertId, 'name' => $fname, 'email' => $femail, 'phone' => $fphone)
+            );
+            return $dataTrue;
         } catch (PDOException $e) {
             echo $e->getMessage();
-            return false;
+            $dataFalse = array(
+                'status' => 'gagal'
+            );
+            return $dataFalse;
         }
     }
 
@@ -124,10 +145,17 @@ class crudajax {
             $stmt->bindparam(":id", $id);
             $stmt->execute();
 
-            return true;
+            $dataTrue = array(
+                'status' => 'berjaya',
+                'data' => array('id' => $id, 'name' => $fname, 'email' => $femail, 'phone' => $fphone)
+            );
+            return $dataTrue;
         } catch (PDOException $e) {
             echo $e->getMessage();
-            return false;
+            $dataFalse = array(
+                'status' => 'gagal'
+            );
+            return $dataFalse;
         }
     }
 

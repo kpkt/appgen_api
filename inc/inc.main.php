@@ -48,7 +48,7 @@
                 <td><?php echo $user['email']; ?></td>
                 <td>
                     <a class="btn btn-info btn-sm" href="edit.php?edit_id=<?php print($user['id']); ?>">Edit Form</a>
-                    <a class="btn btn-primary btn-sm" id="edit-<?php print($user['id']); ?>">Edit Ajax</a>
+                    <a class="btn btn-primary btn-sm edit-ajax" id="edit-<?php print($user['id']); ?>">Edit Ajax</a>
                 </td>
             </tr>
         <?php endforeach; ?>

@@ -35,6 +35,8 @@ try {
 }
 
 include_once 'inc.class.crud.php';
+include_once 'inc.class.ajax.php';
 
 $crud = new crud($DB_con);
+$crudajax = new crudajax($DB_con);
 ?>
