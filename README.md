@@ -16,32 +16,25 @@ Our database and table will be as follow
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+-- 
+-- Dumping data for table `bangsa`
+-- 
 
---
--- AUTO_INCREMENT for dumped tables
---
+INSERT INTO `users` VALUES (1, 'Nur Azyani bin Abdul Manaf','azyani@gmail.com','0113456789');
+INSERT INTO `users` VALUES (2, 'Nurul Annisa Anuar','annisa@gmail.com','0123456789');
+INSERT INTO `users` VALUES (3, 'Saifullah Poniman','saifullah@gmail.com','0133456789');
+INSERT INTO `users` VALUES (4, 'Mohd Salleh Daim','salled.daim@gmail.com','0143456789');
 
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ```
 
 # Directory
@@ -63,10 +56,16 @@ js/
    --function.js
 css/
    --style.css
-
-inc.header.php
-inc.footer.php
+inc/
+   --inc.class.ajax.php
+   --inc.class.crud.php
+   --inc.data.add.php
+   --inc.data.edit.php
+   --inc.dbconfig.php
+   --inc.header.php
+   --inc.footer.php
+add.php
+edit.php
 index.php
-
 
 ```       

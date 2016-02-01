@@ -12,8 +12,8 @@
  */
 
 /*
- * @name Main page
- * @description this file will show the records from the mysql database. 
+ * @name Add page
+ * @description this file will show form for insert new data
  */
 ?>
 <?php
@@ -34,7 +34,7 @@ include_once 'inc/inc.header.php';
     /*
      * replace include_once with other file
      */
-    include_once 'inc/inc.main.php';
+    include_once 'inc/inc.data.add.php';
     ?>
 
 </div>

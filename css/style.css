@@ -42,6 +42,20 @@ body {
     border-top: 1px solid #e5e5e5;
 }
 
+/* Custome Table thead color */
+.table-bordered.table-highlight {
+    border-top-color: #2c2c2c;    
+}
+
+.table thead tr:first-child {
+    background-color: #363636;    
+}
+.table thead tr:first-child th {
+    border: 1px solid #2c2c2c;
+    color: #fff;
+    font-weight: 600;
+}
+
 /* Customize container */
 @media (min-width: 1200px) {
     .container {
