@@ -70,4 +70,6 @@ add_form.php
 edit_ajax.php
 edit_form.php
 get_ajax.php
+index_ajax.php <- will include in class training 
+carian_ajax.php <- will include in class training 
 ```       
