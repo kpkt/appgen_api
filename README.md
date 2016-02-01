@@ -58,14 +58,16 @@ css/
    --style.css
 inc/
    --inc.class.ajax.php
-   --inc.class.crud.php
-   --inc.data.add.php
-   --inc.data.edit.php
+   --inc.class.crud.php   
    --inc.dbconfig.php
    --inc.header.php
    --inc.footer.php
 add.php
 edit.php
 index.php
-
+add_ajax.php
+add_form.php
+edit_ajax.php
+edit_form.php
+get_ajax.php
 ```       
