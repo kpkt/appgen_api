@@ -5,7 +5,7 @@ Penggunaan AppGen - API Manager dan pembangunan API Service dengan mengggunakan 
 
 Our database and table will be as follow  
 
-```mysql
+```php
 --
 -- Database: `db_api`
 --
@@ -47,7 +47,7 @@ ALTER TABLE `users`
 # Directory
 Our directory will be as follow  
 
-```html
+```php
 bootstrap/
    --css/
       --bootstrap.min.css
@@ -58,4 +58,9 @@ bootstrap/
        --glyphicons-halflings-regular.svg
        --glyphicons-halflings-regular.ttf
        --glyphicons-halflings-regular.woff
+js/
+   --jquery.min.js    
+   --function.js
+css/
+   --style.css
 ```       
