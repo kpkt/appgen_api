@@ -63,4 +63,10 @@ js/
    --function.js
 css/
    --style.css
+
+inc.header.php
+inc.footer.php
+index.php
+
+
 ```       
